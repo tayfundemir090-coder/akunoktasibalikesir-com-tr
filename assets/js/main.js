@@ -35,7 +35,7 @@
     if (header) header.classList.toggle('is-scrolled', window.scrollY > 10);
   }
   window.addEventListener('scroll', onScroll, { passive: true });
-  onScroll();
+  requestAnimationFrame(onScroll);
 
   // Yıl
   document.querySelectorAll('[data-year]').forEach(function (el) {
